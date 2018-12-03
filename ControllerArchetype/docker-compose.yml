@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  controllerarchetype:
+    image: ${DOCKER_REGISTRY-}controllerarchetype
+    build:
+      context: .\ControllerArchetype
+      dockerfile: Dockerfile

@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ControllerArchetype/bin/Debug
+/ControllerArchetype/Container/bin/Debug
+/ControllerArchetype/Container/obj/Debug
+/ControllerArchetype/ControllerArchetype.Tests/bin/Debug
+/ControllerArchetype/ControllerArchetype.Tests/obj/Debug
+/ControllerArchetype/obj
+/ControllerArchetype/packages
+/ControllerArchetype/.vs
+/ControllerArchetype/ControllerArchetype/obj
+/ControllerArchetype/ControllerArchetype/bin
