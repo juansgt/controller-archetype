@@ -1,5 +1,6 @@
 ﻿using Container;
 using ControllerArchetype.Services.AccountService;
+using DataAccess.AccountDao;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace ControllerArchetype
         protected void Application_Start()
         {
             //GlobalConfiguration.Configure(WebApiConfig.Register);
-            ContainerService.Instance.GetUnityContainer().RegisterType<IAccountService, AccountServiceMock>();
+            ContainerService.Instance.GetUnityContainer().RegisterType<IAccountService, AccountServiceProxy>();
+            ContainerService.Instance.GetUnityContainer().RegisterType<IAccountDao, AccountDaoMongoDB>();
 
             //Enabling Attribute Routing
             GlobalConfiguration.Configuration.MapHttpAttributeRoutes();
