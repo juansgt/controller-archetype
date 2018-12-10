@@ -19,7 +19,7 @@ namespace ControllerArchetype.Services.AccountService
 
             foreach (BusinessAccount businessAccount in accountDao.FindAccounts())
             {
-                accounts.Add(new Account(businessAccount.AccountNumber, businessAccount.Balance));
+                accounts.Add(new Account(businessAccount.AccountId, businessAccount.AccountNumber, businessAccount.Balance));
             }
 
             return accounts;

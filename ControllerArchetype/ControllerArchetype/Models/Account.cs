@@ -7,13 +7,15 @@ namespace ControllerArchetype.Models
 {
     public class Account
     {
+        public string AccountId { get; private set; }
         public string AccountNumber { get; private set; }
-        public decimal balance { get; set; }
+        public decimal Balance { get; set; }
 
-        public Account(string accountNumber, decimal balance)
+        public Account(string accountId, string accountNumber, decimal balance)
         {
+            AccountId = accountId;
             AccountNumber = accountNumber;
-            this.balance = balance;
+            Balance = balance;
         }
     }
 }
