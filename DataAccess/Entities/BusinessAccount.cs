@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ namespace DataAccess.Entities
     public class BusinessAccount
     {
         [BsonId]
-        public string AccountId { get; private set; }
-        [BsonElement("AccountNumber")]
+        public ObjectId AccountId { get; private set; }
+        [BsonElement("accountNumber")]
         public string AccountNumber { get; private set; }
-        [BsonElement("Type")]
+        [BsonElement("type")]
         public string Type { get; private set; }
-        [BsonElement("Balance")]
+        [BsonElement("balance")]
         public decimal Balance { get; set; }
 
-        public BusinessAccount(string accountId, string accountNumber, string type, decimal balance)
+        public BusinessAccount(ObjectId accountId, string accountNumber, string type, decimal balance)
         {
             AccountId = accountId;
             AccountNumber = accountNumber;

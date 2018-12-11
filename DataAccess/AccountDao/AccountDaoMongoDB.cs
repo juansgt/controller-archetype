@@ -16,7 +16,7 @@ namespace DataAccess.AccountDao
             MongoClient mongoClient = new MongoClient("mongodb://127.0.0.1:27017");
 
             IMongoDatabase mongoDatabase = mongoClient.GetDatabase("RecursosAjenos");
-            var collection = mongoDatabase.GetCollection<BusinessAccount>("Accounts");
+            var collection = mongoDatabase.GetCollection<BusinessAccount>("accounts");
 
             return collection.AsQueryable().ToList();
 
