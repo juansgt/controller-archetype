@@ -13,7 +13,7 @@ namespace DataAccess.AccountDao
     {
         public IEnumerable<BusinessAccount> FindAccounts()
         {
-            MongoClient mongoClient = new MongoClient("mongodb://172.17.0.2:27017");
+            MongoClient mongoClient = new MongoClient("mongodb://127.0.0.1:27017");
 
             IMongoDatabase mongoDatabase = mongoClient.GetDatabase("RecursosAjenos");
             var collection = mongoDatabase.GetCollection<BusinessAccount>("Accounts");

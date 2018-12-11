@@ -14,3 +14,6 @@
 /ControllerArchetype/ControllerArchetype/bin
 /DataAccess/obj/Debug
 /DataAccess/bin/Debug
+/.vs
+/ControllerArchetype/Container/obj/Release
+/DataAccess/obj/Release
